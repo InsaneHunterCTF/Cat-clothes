@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cat Outfit Try-On — Dress the Cat!</title>
+   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Cat Outfit Try-On</h1>
+        <div class="tag">Dress the illustrated cat — drag, scale, rotate, download.</div>
+      </div>
+
+      <div class="toolbar">
+        <label class="upload">
+          <input id="uploadCat" type="file" accept="image/*">
+          Upload Cat
+        </label>
+
+        <label class="upload">
+          <input id="uploadAsset" type="file" accept="image/*,image/svg+xml">
+          Upload Outfit
+        </label>
+
+        <button id="randomBtn" class="btn">Random Outfit</button>
+        <button id="resetBtn" class="btn alt">Reset</button>
+        <button id="downloadBtn" class="btn primary">Download PNG</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="canvas-card">
+        <div class="canvas-stage">
+          <canvas id="catCanvas" width="900" height="900"></canvas>
+        </div>
+
+        <div class="controls-panel">
+          <div class="selected-row">
+            <div><strong>Selected:</strong> <span id="selName">—</span></div>
+            <div class="control-actions">
+              <button id="bringBtn" class="btn small">Bring Front</button>
+              <button id="flipBtn" class="btn small">Flip H</button>
+            </div>
+          </div>
+
+          <div class="sliders">
+            <div class="slider-group">
+              <label class="small">Scale</label>
+              <input id="scaleRange" type="range" min="0.2" max="3" step="0.01" value="1">
+            </div>
+            <div class="slider-group">
+              <label class="small">Rotation</label>
+              <input id="rotRange" type="range" min="-180" max="180" step="1" value="0">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-card">
+        <div class="panel">
+          <h3>Clothes & Accessories</h3>
+          <div id="assets" class="asset-grid"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Added Items</h3>
+          <div id="itemList" class="item-list"></div>
+        </div>
+
+        
+      </aside>
+    </main>
+
+    <footer class="footer">
+      Built for quick prototyping — copy these files and open <code>index.html</code>.
+    </footer>
+  </div>
+
+ 
+</body>
+</html>
